@@ -363,3 +363,82 @@ footer {
 #contatos {
     scroll-margin-top: 100px;
 }
+
+
+/* ... [todo seu CSS acima permanece igual até o final] ... */
+
+/* RESPONSIVIDADE */
+@media (max-width: 1024px) {
+    .formacao-caixa,
+    .trabalho-caixa {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  
+    .formacao-imagem,
+    .trabalho-imagem {
+      width: 80%;
+      max-width: 400px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .menu {
+      flex-direction: column;
+      gap: 1rem;
+    }
+  
+    .foto-perfil {
+      width: 250px;
+      height: 250px;
+    }
+  
+    h1 {
+      font-size: 2.5rem;
+    }
+  
+    .profissao {
+      font-size: 1.2rem;
+    }
+  
+    .sobre-paragrafo,
+    .experiencia-list,
+    .formacao-caixa ul,
+    .trabalho-caixa ul {
+      font-size: 1rem;
+    }
+  
+    .formacao-caixa,
+    .trabalho-caixa {
+      padding: 2rem;
+    }
+  
+    .caixa-contatos {
+      flex-direction: column;
+      gap: 1rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .foto-perfil {
+      width: 200px;
+      height: 200px;
+    }
+  
+    h1 {
+      font-size: 2rem;
+    }
+  
+    .menu-link {
+      font-size: 1rem;
+    }
+  
+    .sobre-titulo,
+    .experiencia-titulo,
+    .formacao-titulo,
+    .trabalho-titulo {
+      font-size: 2rem;
+    }
+  }
+  
