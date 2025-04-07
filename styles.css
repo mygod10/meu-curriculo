@@ -441,4 +441,57 @@ footer {
       font-size: 2rem;
     }
   }
+
+  /* Oculta o botão no desktop */
+.menu-toggle {
+    display: none;
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 0.5rem 0.7rem;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  
+  .menu-toggle i {
+    color: white;
+    font-size: 1.5rem;
+  }
+  
+  /* Menu padrão no desktop */
+  .navegacao {
+    position: relative;
+    z-index: 999;
+  }
+  
+  /* Responsivo - celular */
+  @media (max-width: 768px) {
+    .navegacao {
+      position: fixed;
+      top: 0;
+      left: -100%;
+      width: 70%;
+      height: 100%;
+      background-color: #2d1b12;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: left 0.3s ease-in-out;
+    }
+  
+    .navegacao.ativo {
+      left: 0;
+    }
+  
+    .menu {
+      flex-direction: column;
+      gap: 2rem;
+    }
+  
+    .menu-toggle {
+      display: block;
+    }
+  }
   

@@ -11,6 +11,10 @@
 </head>
 
 <body>
+    <div class="menu-toggle" onclick="toggleMenu()">
+        <i class="fas fa-bars"></i>
+      </div>
+
     <nav id="navegacao" class="navegacao">
         <ul class="menu">
             <li><a href="#home" class="menu-link" >Home</a></li>
@@ -130,7 +134,14 @@
     </footer>
 
 
-
 </body>
 
 </html>
+
+<script>
+    function toggleMenu() {
+      const nav = document.getElementById("navegacao");
+      nav.classList.toggle("ativo");
+    }
+  </script>
+  
