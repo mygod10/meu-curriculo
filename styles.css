@@ -1,0 +1,365 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+:root {
+    --amarelinho: #efbb6b;
+    --primaria: #4f46e5;
+    --secundaria: #7c3aed;
+    --escuro: #0f172a;
+    --maisEscuro: #0a0f1c;
+    --claro: #e2e8f0;
+    --vidro: rgba(255, 255, 255, 0.1);
+}
+
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-image: url(./img/foto\ sentada\ em\ poutorna.jpeg);
+    /* Substitua pelo caminho da sua imagem */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(./img/foto\ sentada\ em\ poutorna.jpeg);
+    /* Mesma imagem */
+    background-size: cover;
+    background-position: center;
+    filter: blur(20px);
+    /* Ajuste o desfoque aqui */
+    z-index: -1;
+}
+
+.navegacao {
+    position: fixed;
+    top: 0;
+    background: rgba(122, 99, 18, 0.793);
+    /* Fundo semi-transparente */
+    backdrop-filter: blur(8px);
+    /* Desfoque do que está atrás */
+    -webkit-backdrop-filter: blur(8px);
+    /* Suporte para Safari */
+    width: 100%;
+    z-index: 100;
+    padding: 1.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    /* Opcional: linha sutil */
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 4rem; /* Espaço entre os links */
+    justify-content: center; /* Centraliza no menu */
+    padding: 0;
+    margin: 0;
+}
+.menu li {
+    display: inline-block;
+    margin: 0 1rem; /* Espaço lateral entre os itens */
+}
+.menu-link {
+    text-decoration: none;
+    color: var(--claro);
+    font-weight: 500;
+    position: relative;
+    padding: 0.5rem 0;
+}
+
+.menu-link::after {
+    content: '';
+    height: 2px;
+    width: 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(90deg, var(--amarelinho), var(--maisEscuro));
+    transition: width 0.5s ease;
+}
+
+.menu-link:hover::after {
+    width: 100%;
+}
+
+.foto-perfil {
+    width: 350px;
+    height: 350px;
+    box-shadow: 0 0 20px rgba(86, 70, 12, 0.535);
+    border-radius: 170px;
+    border: 4px solid rgba(86, 70, 12, 0.535);
+}
+
+h1 {
+    font-size: 3.5rem;
+    color: var(--claro);
+    font-weight: bold;
+    margin: 20px;
+}
+
+.profissao {
+    font-size: 1.5rem;
+    color: var(--claro);
+}
+
+.cabecalho {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.sobre {
+    padding: 6rem 2rem;
+}
+
+.sobre-titulo {
+    font-size: 3rem;
+    color: var(--claro);
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.sobre-caixa {
+    padding: 2rem;
+    max-width: 1100px;
+    margin: 0 auto;
+    border-radius: 16px;
+    border: 1px solid var(--vidro);
+    backdrop-filter: blur(10px);
+    background: rgba(122, 99, 18, 0.793);
+    color: var(--claro);
+
+}
+
+.sobre-paragrafo {
+    text-align: center;
+    font-size: 1.1rem;
+}
+
+.experiencia-titulo {
+    font-size: 3rem;
+    color: var(--claro);
+    text-align: center;
+    margin-bottom: 20px;
+
+}
+
+.experiencia-caixa {
+    padding: 2rem;
+    max-width: 1100px;
+    margin: 0 auto;
+    border-radius: 16px;
+    border: 1px solid var(--vidro);
+    backdrop-filter: blur(10px);
+    background: rgba(122, 99, 18, 0.793);
+    color: var(--claro);
+}
+
+.experiencia-caixa::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url(./img/foto\ sentada\ assinando.jpeg);
+    /* Substitua pelo caminho correto da imagem */
+    background-size: cover;
+    /* A imagem vai cobrir toda a caixa */
+    background-position: center;
+    /* A imagem ficará centralizada */
+    background-repeat: no-repeat;
+    /* A imagem não se repetirá */
+    filter: blur(11px);
+    /* Aplica o desfoque */
+    z-index: -5;
+}
+
+.experiencia-caixa ul {
+    width: auto;
+    height: auto;
+}
+
+
+.experiencia-list {
+    font-size: 1.5rem;
+    text-align: left;
+    list-style-position: inside;
+}
+
+
+.experiencia-imagem {
+    width: 300px;
+    height: 300px;
+    margin: 0px 0px 0px 700px;
+}
+
+
+.formacao {
+    padding: 6rem 2rem;
+
+}
+
+.formacao-titulo {
+    font-size: 3rem;
+    color: var(--claro);
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.formacao-caixa {
+    padding: 4rem;
+    max-width: 1100px;
+    margin: 0 auto;
+    border-radius: 16px;
+    border: 1px solid var(--vidro);
+    backdrop-filter: blur(10px);
+    background: rgba(122, 99, 18, 0.793);
+    color: var(--claro);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    /* Espaço entre texto e imagem */
+    flex-wrap: wrap;
+    /* Garante que funcione bem em telas menores */
+}
+
+.formacao-caixa ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.formacao-card {
+    max-width: 300px;
+    /* Ajuste conforme necessário */
+    flex-shrink: 0;
+}
+
+.formacao-imagem {
+    width: 100%;
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+
+.trabalhos {
+    padding: 6rem 2rem;
+
+}
+
+.trabalho-titulo {
+    font-size: 3rem;
+    color: var(--claro);
+    text-align: center;
+    margin-bottom: 20px;
+
+}
+
+.trabalho-caixa {
+    padding: 2rem;
+    max-width: 1100px;
+    margin: 0 auto;
+    border-radius: 16px;
+    border: 1px solid var(--vidro);
+    backdrop-filter: blur(10px);
+    background: rgba(122, 99, 18, 0.793);
+    color: var(--claro);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    /* Espaço entre texto e imagem */
+    flex-wrap: wrap;
+    /* Garante que funcione bem em telas menores */
+
+}
+
+.trabalho-caixa ul {
+
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 1.5rem;
+
+}
+
+.trabalho-card {
+    max-width: 300px;
+    /* Ajuste conforme necessário */
+    flex-shrink: 0;
+
+}
+
+.trabalho-imagem {
+    width: 100%;
+    border-radius: 12px;
+    object-fit: cover;
+
+}
+
+footer {
+    background-color: rgba(122, 99, 18, 0.793); /* Cor de fundo escura */
+    color: #fff;
+    padding: 1.5rem 2rem;
+    border-top: 2px solid #fff; /* Borda branca de ponta a ponta */
+    width: 100%;
+    position: relative;
+    bottom: 0;
+}
+
+.caixa-contatos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem; /* Espaço entre os itens */
+    flex-wrap: wrap; /* Para quebrar em telas menores */
+    text-align: center;
+}
+
+.caixa-contatos a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+.caixa-contatos a:hover {
+    color: #d1d5db; /* Um branco acinzentado no hover */
+}
+
+.caixa-contatos i {
+    margin-left: 0.5rem;
+    color: #fff;
+}
+
+#sobre,
+#experiencia,
+#formacao,
+#trabalhos,
+#contatos {
+    scroll-margin-top: 100px;
+}
